@@ -7,7 +7,6 @@ public class BiggestNumber {
         if(n<=10){
 			return -1;
 		}
-    
 		int quotient=0, i=0, maxChk=0;
 		int mod[] = new int[20];
     
@@ -27,10 +26,6 @@ public class BiggestNumber {
 			//i++;
 		}
 
-		for(int j=0 ; j<i ; j++){
-			//System.out.println("  " + mod[j]);
-		}
-		//System.out.println("quotient :  " + quotient);
 		int j = 0;
 		int m=quotient%10, nm = 2144783000, nmf=0;
 		for(j=0 ; j<i ; j++){
@@ -39,8 +34,6 @@ public class BiggestNumber {
 				nmf = j;
 			}
 		}
-		
-		//System.out.println("nm :  " + nm+ "  "+nmf);
 		
 		if(quotient == 0){
 			return -1;
@@ -54,7 +47,6 @@ public class BiggestNumber {
 		mod[i]=m;
 		int lChk=0;
 		j=0;
-		//System.out.println("i :  " + i);
 		while(j != i){
 			int k=0;
 			for(k=0 ; k<i ; k++){
@@ -74,16 +66,10 @@ public class BiggestNumber {
 				quotient = quotient*10+nm;
 				mod[nmf] = 20;
 			}
-			
-			
-			
 			nm = 2144783000;
-			//System.out.println("i :  " + i+" j : "+j+" mod : "+mod[j]);
 			j++;
-			
 		}
 		
-		//System.out.println("quotient :  " + quotient);
         return quotient;
     }
 }
